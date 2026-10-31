@@ -218,3 +218,47 @@ footer {
   .card p, .panel p, .panel li, .item p, .item li { font-size: 15px; }
   .card:hover, .panel:hover { transform: none; }
 }
+
+
+/* ---------- Project cards & detail popups ---------- */
+.project-card .cardbody { align-items: flex-start; }
+.project-open { margin-top: auto; cursor: pointer; font-family: inherit; }
+.project-modal {
+  position: fixed; inset: 0; z-index: 1000; display: none;
+  align-items: center; justify-content: center; padding: 22px;
+  background: rgba(20, 16, 14, .72); backdrop-filter: blur(8px);
+}
+.project-modal.is-open { display: flex; }
+.modal-panel {
+  position: relative; width: min(820px, 100%); max-height: min(88vh, 900px);
+  overflow-y: auto; padding: clamp(24px, 5vw, 44px);
+  border: 1px solid var(--line); border-radius: 22px;
+  background: var(--bg); box-shadow: 0 30px 90px rgba(0,0,0,.3);
+  outline: none;
+}
+.modal-panel h2 { margin: 8px 48px 8px 0; font-size: clamp(30px, 5vw, 44px); }
+.modal-intro { max-width: 650px; margin: 0 0 28px; color: var(--text); }
+.modal-close {
+  position: absolute; top: 18px; right: 18px; width: 42px; height: 42px;
+  border: 1px solid var(--line); border-radius: 50%; background: var(--card);
+  color: var(--heading); font-size: 27px; line-height: 1; cursor: pointer;
+}
+.modal-close:hover { border-color: var(--accent); color: var(--accent); }
+.modal-section { margin-top: 26px; }
+.modal-section-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.modal-section-head h3 { margin: 0; font-size: 23px; }
+.coming-soon { padding: 5px 10px; border: 1px solid var(--line); border-radius: 99px; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; }
+.media-placeholder {
+  min-height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 24px; border: 1px dashed var(--line); border-radius: 16px;
+  background: var(--bg-alt); text-align: center;
+}
+.placeholder-icon { margin-bottom: 8px; color: var(--accent); font-size: 30px; }
+.media-placeholder strong { color: var(--heading); }
+.media-placeholder p { margin: 4px 0 0; font-size: 14px; }
+body.modal-open { overflow: hidden; }
+@media (max-width: 600px) {
+  .project-modal { padding: 10px; align-items: flex-end; }
+  .modal-panel { max-height: 92vh; border-radius: 20px 20px 12px 12px; padding: 26px 20px; }
+  .modal-section-head { align-items: flex-start; }
+}
