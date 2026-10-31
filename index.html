@@ -3,141 +3,183 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Adeeba Faiz — Portfolio</title>
-  <meta name="description" content="Portfolio of Adeeba Faiz — projects, skills and contact details.">
-  <meta property="og:title" content="Adeeba Faiz — Portfolio">
-  <meta property="og:description" content="Projects, skills and contact details.">
+  <title>Adeeba Faiz | Portfolio</title>
+  <meta name="description" content="Adeeba Faiz — portfolio of projects, education, experience and skills.">
+  <meta property="og:title" content="Adeeba Faiz | Portfolio">
+  <meta property="og:description" content="Portfolio of projects, education, experience and skills.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#faf6f1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="nav" id="top">
-    <a class="brand" href="#top" aria-label="Adeeba Faiz, home">AF<span>.</span></a>
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a class="btn btn-small" href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-inner reveal">
-        <p class="eyebrow">Hello, I'm</p>
-        <h1>Adeeba Faiz</h1>
-        <p class="lead">[Your role / title] — I [one line about what you do and who you help].</p>
-        <div class="hero-actions">
-          <a class="btn" href="#projects">View my work</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#">ADEEBA FAIZ</a>
+      <div class="navlinks">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Portfolio · 2026</span>
+        <h1>Adeeba <span>Faiz</span></h1>
+        <div class="role">[Field] · [Field] · [Field]</div>
+        <p class="intro">[Two-line introduction: your current degree or role, the hands-on experience you have, and what you are interested in.]</p>
+        <div class="actions">
+          <a class="btn" href="#projects">Explore Projects ↓</a>
+          <a class="btn alt" href="#contact">Contact Me</a>
         </div>
       </div>
-      <div class="hero-card reveal" aria-hidden="true">
-        <div class="avatar">AF</div>
-        <ul class="stats">
-          <li><strong>00+</strong><span>Projects</span></li>
-          <li><strong>0 yrs</strong><span>Experience</span></li>
-          <li><strong>00+</strong><span>Clients</span></li>
-        </ul>
-      </div>
-    </section>
+      <div class="avatar" aria-label="Profile photo placeholder">AF</div>
+    </div>
+  </div>
+</header>
 
-    <section id="about" class="section">
-      <div class="section-head reveal">
-        <p class="eyebrow">About</p>
-        <h2>A little about me</h2>
-      </div>
-      <div class="about-grid reveal">
-        <p>Write a short introduction here: who you are, what you studied or do, and what drives your work. Two or three sentences is plenty.</p>
-        <p>Add a second paragraph about your approach, your interests outside work, or what you are looking for next.</p>
-      </div>
-    </section>
-
-    <section id="skills" class="section alt">
-      <div class="section-head reveal">
-        <p class="eyebrow">Skills</p>
-        <h2>What I bring</h2>
-      </div>
-      <div class="chips reveal">
-        <span>Skill one</span><span>Skill two</span><span>Skill three</span>
-        <span>Skill four</span><span>Skill five</span><span>Skill six</span>
-        <span>Skill seven</span><span>Skill eight</span>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="section-head reveal">
-        <p class="eyebrow">Projects</p>
-        <h2>Selected work</h2>
+<main>
+  <section id="projects" class="section projects">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Selected work</div>
+        <h2>Projects &amp; Creative Work</h2>
+        <p class="sub">[One line about the kind of work shown below.]</p>
       </div>
       <div class="cards">
-        <article class="card reveal">
-          <div class="card-tag">Category</div>
-          <h3>Project title one</h3>
-          <p>One or two lines on the problem, what you did, and the result.</p>
-          <a class="link" href="#" aria-label="View project one">View project →</a>
+        <article class="card poster-collection">
+          <div class="cardbody">
+            <span class="tag">[Category]</span>
+            <h3>[Project collection title]</h3>
+            <p>[One or two lines describing this collection of work.]</p>
+            <div class="poster-grid">
+              <div class="ph">Work 01</div>
+              <div class="ph">Work 02</div>
+              <div class="ph">Work 03</div>
+              <div class="ph">Work 04</div>
+            </div>
+            <p class="note">Select any item to open it in full size.</p>
+          </div>
         </article>
-        <article class="card reveal">
-          <div class="card-tag">Category</div>
-          <h3>Project title two</h3>
-          <p>One or two lines on the problem, what you did, and the result.</p>
-          <a class="link" href="#" aria-label="View project two">View project →</a>
+
+        <article class="card">
+          <div class="cardbody">
+            <span class="tag">[Category]</span>
+            <h3>[Project title]</h3>
+            <p>[One or two lines describing this project and your role in it.]</p>
+            <div class="reel-gallery">
+              <div class="reel-item"><div class="ph tall">Item 01</div><span>Item 01</span></div>
+              <div class="reel-item"><div class="ph tall">Item 02</div><span>Item 02</span></div>
+            </div>
+          </div>
         </article>
-        <article class="card reveal">
-          <div class="card-tag">Category</div>
-          <h3>Project title three</h3>
-          <p>One or two lines on the problem, what you did, and the result.</p>
-          <a class="link" href="#" aria-label="View project three">View project →</a>
+
+        <article class="card">
+          <div class="cardbody">
+            <span class="tag">[Category]</span>
+            <h3>[Project title]</h3>
+            <p>[One or two lines describing this project and your role in it.]</p>
+            <div class="poster-grid">
+              <div class="ph">Work 01</div>
+              <div class="ph">Work 02</div>
+            </div>
+            <p class="note">Select any item to open it in full size.</p>
+          </div>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="experience" class="section alt">
-      <div class="section-head reveal">
-        <p class="eyebrow">Experience</p>
-        <h2>Where I've worked &amp; studied</h2>
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Introduction</div>
+        <h2>About Me</h2>
       </div>
-      <ol class="timeline">
-        <li class="reveal">
-          <span class="when">Year – Present</span>
-          <h3>Role title · Organisation</h3>
-          <p>One line on what you do or achieved here.</p>
-        </li>
-        <li class="reveal">
-          <span class="when">Year – Year</span>
-          <h3>Role or degree · Organisation</h3>
-          <p>One line on what you did or learned.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div class="section-head reveal">
-        <p class="eyebrow">Contact</p>
-        <h2>Let's work together</h2>
-        <p class="lead">Have a project or an opportunity in mind? I'd love to hear about it.</p>
+      <div class="panel">
+        <p>[A short paragraph about you: what you are studying or do, the experience you have, and what you enjoy working on.]</p>
       </div>
-      <div class="contact-links reveal">
-        <a class="btn" href="mailto:your-email@example.com">your-email@example.com</a>
-        <a class="btn btn-ghost" href="#" rel="noopener">LinkedIn</a>
-        <a class="btn btn-ghost" href="#" rel="noopener">Instagram</a>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Academic background</div>
+        <h2>Education</h2>
       </div>
-    </section>
-  </main>
+      <div class="edu">
+        <div class="panel"><h3>[Degree] — [Specialisation]</h3><p>[University / Institution]</p><span>[Years]</span></div>
+        <div class="panel"><h3>[Degree] — [Specialisation]</h3><p>[University / Institution]</p><span>[Year]</span></div>
+        <div class="panel"><h3>Senior Secondary (12th)</h3><p>[School name] · [Year]</p></div>
+        <div class="panel"><h3>Secondary (10th)</h3><p>[School name] · [Year]</p></div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <p>© <span id="year"></span> Adeeba Faiz. All rights reserved.</p>
-    <a href="#top">Back to top ↑</a>
-  </footer>
+  <section id="experience" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Professional background</div>
+        <h2>Internship Experience</h2>
+      </div>
+      <div class="timeline">
+        <article class="item">
+          <h3>[Role] · [Organisation]</h3>
+          <div class="meta">[Duration]</div>
+          <p>[Two lines on what you did, the tools you used and what you learned.]</p>
+        </article>
+        <article class="item">
+          <h3>[Role] · [Organisation]</h3>
+          <div class="meta">[Duration]</div>
+          <p>[Two lines on what you did, the tools you used and what you learned.]</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <section id="skills" class="section alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Capabilities</div>
+        <h2>Skills &amp; Tools</h2>
+      </div>
+      <div class="two">
+        <div class="panel">
+          <h3>[Skill group one]</h3>
+          <div class="chips">
+            <span class="chip">Skill one</span><span class="chip">Skill two</span>
+            <span class="chip">Skill three</span><span class="chip">Skill four</span>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>[Skill group two]</h3>
+          <div class="chips">
+            <span class="chip">Skill one</span><span class="chip">Skill two</span>
+            <span class="chip">Skill three</span><span class="chip">Skill four</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="wrap">
+      <div class="kicker">Get in touch</div>
+      <h2>Let's connect</h2>
+      <p class="sub">For professional opportunities, collaborations and project enquiries.</p>
+      <div class="contactgrid">
+        <a class="contactlink" href="mailto:your-email@example.com">your-email@example.com</a>
+        <a class="contactlink" href="tel:+910000000000">+91 00000 00000</a>
+        <a class="contactlink" href="#" rel="noopener">LinkedIn Profile ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Adeeba Faiz · Portfolio</footer>
+
 </body>
 </html>
