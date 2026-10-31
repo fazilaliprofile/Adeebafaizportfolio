@@ -53,18 +53,20 @@
         <h2>Projects</h2>
       </div>
       <div class="cards">
-        <article class="card">
+        <article class="card project-card">
           <div class="cardbody">
             <span class="tag">Digital Marketing · Social Media</span>
             <h3>MJ Marketing Consultancy</h3>
-            <p>Led a team creating social media content for Instagram, Facebook and LinkedIn: designed posts, reels and carousel graphics in Canva, planned monthly content calendars, and coordinated interns on live digital marketing projects.</p>
+            <p>Social media campaigns, creative content, posters and reels.</p>
+            <button class="btn project-open" type="button" data-project="mj-project">View Project <span aria-hidden="true">↗</span></button>
           </div>
         </article>
-        <article class="card">
+        <article class="card project-card">
           <div class="cardbody">
             <span class="tag">Human Resources</span>
             <h3>Ascend</h3>
-            <p>Worked as an HR Generalist intern: maintained intern records and performance tracking, developed training modules, supported recruitment from resume screening to interview coordination, and handled onboarding and offboarding.</p>
+            <p>HR operations, recruitment support, training and team coordination.</p>
+            <button class="btn project-open" type="button" data-project="ascend-project">View Project <span aria-hidden="true">↗</span></button>
           </div>
         </article>
       </div>
@@ -219,6 +221,60 @@
 </main>
 
 <footer>© 2026 Adeeba Faiz · Portfolio</footer>
+
+
+<!-- Project detail popups -->
+<div class="project-modal" id="mj-project" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="mj-project-title">
+  <div class="modal-panel" tabindex="-1">
+    <button class="modal-close" type="button" aria-label="Close project">×</button>
+    <div class="kicker">Digital Marketing · Social Media</div>
+    <h2 id="mj-project-title">MJ Marketing Consultancy</h2>
+    <p class="modal-intro">A collection of social media work and campaign creatives. Project materials can be added here later.</p>
+    <section class="modal-section"><div class="modal-section-head"><h3>Posters</h3><span class="coming-soon">Coming soon</span></div><div class="media-placeholder"><span class="placeholder-icon">▧</span><strong>Poster Gallery</strong><p>Posters and static creatives will appear here.</p></div></section>
+    <section class="modal-section"><div class="modal-section-head"><h3>Reels</h3><span class="coming-soon">Coming soon</span></div><div class="media-placeholder"><span class="placeholder-icon">▶</span><strong>Reels Gallery</strong><p>Video edits and reel projects will appear here.</p></div></section>
+  </div>
+</div>
+<div class="project-modal" id="ascend-project" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="ascend-project-title">
+  <div class="modal-panel" tabindex="-1">
+    <button class="modal-close" type="button" aria-label="Close project">×</button>
+    <div class="kicker">Human Resources</div>
+    <h2 id="ascend-project-title">Ascend</h2>
+    <p class="modal-intro">Project experience, responsibilities and supporting work will be added here later.</p>
+    <section class="modal-section"><div class="modal-section-head"><h3>Project Overview</h3><span class="coming-soon">Coming soon</span></div><div class="media-placeholder"><span class="placeholder-icon">＋</span><strong>Project Details</strong><p>Case study, deliverables and project highlights will appear here.</p></div></section>
+  </div>
+</div>
+<script>
+(() => {
+  const openButtons = document.querySelectorAll('.project-open');
+  let activeModal = null;
+  let lastTrigger = null;
+  const closeModal = () => {
+    if (!activeModal) return;
+    activeModal.classList.remove('is-open');
+    activeModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    activeModal = null;
+    if (lastTrigger) lastTrigger.focus();
+  };
+  openButtons.forEach(button => button.addEventListener('click', () => {
+    const modal = document.getElementById(button.dataset.project);
+    if (!modal) return;
+    lastTrigger = button;
+    activeModal = modal;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    modal.querySelector('.modal-panel').focus();
+  }));
+  document.querySelectorAll('.modal-close').forEach(button => button.addEventListener('click', closeModal));
+  document.querySelectorAll('.project-modal').forEach(modal => modal.addEventListener('click', event => {
+    if (event.target === modal) closeModal();
+  }));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeModal();
+  });
+})();
+</script>
 
 </body>
 </html>
