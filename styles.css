@@ -137,7 +137,6 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Cards ---------- */
 .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.poster-collection { grid-column: 1 / -1; }
 .card, .panel {
   background: var(--card);
   border: 1px solid var(--line);
@@ -148,28 +147,11 @@ a { color: inherit; text-decoration: none; }
 .card { overflow: hidden; display: flex; flex-direction: column; }
 .card:hover, .panel:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .cardbody { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+.card p:last-child { margin-bottom: 0; }
 .tag { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; color: var(--accent); }
 .card h3, .panel h3, .item h3 { margin: 7px 0; font-size: 21px; }
 .card p, .panel p, .panel li, .item p { margin: 0 0 18px; font-size: 16px; line-height: 1.75; color: var(--text); }
-.note { font-size: 13px !important; margin: 16px 0 0 !important; }
 
-/* placeholder tiles (replace with real <a><img></a> items) */
-.ph {
-  display: grid; place-items: center; text-align: center;
-  background: var(--placeholder);
-  border: 1px dashed var(--line); border-radius: 10px;
-  color: var(--text); font-size: 13px; font-weight: 600;
-}
-.ph small { display: block; margin-top: 4px; font-size: 12px; font-weight: 500; opacity: .75; }
-.poster-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 8px; }
-.poster-grid .ph, .poster-grid a { height: 220px; border-radius: 10px; overflow: hidden; display: grid; }
-.poster-grid img { width: 100%; height: 100%; object-fit: contain; display: block; }
-.card:not(.poster-collection) .poster-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.reel-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 4px; }
-.reel-item { min-width: 0; }
-.reel-item .ph.tall { aspect-ratio: 9 / 16; }
-.reel-item video { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: contain; background: #1e1814; border-radius: 12px; }
-.reel-item span { display: block; margin-top: 7px; font-size: 13px; font-weight: 700; color: var(--heading); }
 
 /* ---------- Panels, timeline, chips ---------- */
 .panel { padding: 22px; }
@@ -231,9 +213,7 @@ footer {
   .hero h1 { letter-spacing: -1px; }
   .intro, .sub { font-size: 16px; }
   .section { padding: 48px 0; }
-  .cards, .two, .edu, .reel-gallery { grid-template-columns: 1fr; }
-  .poster-grid, .card:not(.poster-collection) .poster-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .poster-grid .ph, .poster-grid a { height: 190px; }
+  .cards, .two, .edu { grid-template-columns: 1fr; }
   .card h3, .panel h3, .item h3 { font-size: 20px; }
   .card p, .panel p, .panel li, .item p, .item li { font-size: 15px; }
   .card:hover, .panel:hover { transform: none; }
