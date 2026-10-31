@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adeeba Faiz — Portfolio</title>
+  <meta name="description" content="Portfolio of Adeeba Faiz — projects, skills and contact details.">
+  <meta property="og:title" content="Adeeba Faiz — Portfolio">
+  <meta property="og:description" content="Projects, skills and contact details.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#faf6f1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="Adeeba Faiz, home">AF<span>.</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a class="btn btn-small" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner reveal">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Adeeba Faiz</h1>
+        <p class="lead">[Your role / title] — I [one line about what you do and who you help].</p>
+        <div class="hero-actions">
+          <a class="btn" href="#projects">View my work</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-card reveal" aria-hidden="true">
+        <div class="avatar">AF</div>
+        <ul class="stats">
+          <li><strong>00+</strong><span>Projects</span></li>
+          <li><strong>0 yrs</strong><span>Experience</span></li>
+          <li><strong>00+</strong><span>Clients</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">About</p>
+        <h2>A little about me</h2>
+      </div>
+      <div class="about-grid reveal">
+        <p>Write a short introduction here: who you are, what you studied or do, and what drives your work. Two or three sentences is plenty.</p>
+        <p>Add a second paragraph about your approach, your interests outside work, or what you are looking for next.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="section-head reveal">
+        <p class="eyebrow">Skills</p>
+        <h2>What I bring</h2>
+      </div>
+      <div class="chips reveal">
+        <span>Skill one</span><span>Skill two</span><span>Skill three</span>
+        <span>Skill four</span><span>Skill five</span><span>Skill six</span>
+        <span>Skill seven</span><span>Skill eight</span>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head reveal">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected work</h2>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card-tag">Category</div>
+          <h3>Project title one</h3>
+          <p>One or two lines on the problem, what you did, and the result.</p>
+          <a class="link" href="#" aria-label="View project one">View project →</a>
+        </article>
+        <article class="card reveal">
+          <div class="card-tag">Category</div>
+          <h3>Project title two</h3>
+          <p>One or two lines on the problem, what you did, and the result.</p>
+          <a class="link" href="#" aria-label="View project two">View project →</a>
+        </article>
+        <article class="card reveal">
+          <div class="card-tag">Category</div>
+          <h3>Project title three</h3>
+          <p>One or two lines on the problem, what you did, and the result.</p>
+          <a class="link" href="#" aria-label="View project three">View project →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section alt">
+      <div class="section-head reveal">
+        <p class="eyebrow">Experience</p>
+        <h2>Where I've worked &amp; studied</h2>
+      </div>
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="when">Year – Present</span>
+          <h3>Role title · Organisation</h3>
+          <p>One line on what you do or achieved here.</p>
+        </li>
+        <li class="reveal">
+          <span class="when">Year – Year</span>
+          <h3>Role or degree · Organisation</h3>
+          <p>One line on what you did or learned.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-head reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's work together</h2>
+        <p class="lead">Have a project or an opportunity in mind? I'd love to hear about it.</p>
+      </div>
+      <div class="contact-links reveal">
+        <a class="btn" href="mailto:your-email@example.com">your-email@example.com</a>
+        <a class="btn btn-ghost" href="#" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="#" rel="noopener">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Adeeba Faiz. All rights reserved.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
