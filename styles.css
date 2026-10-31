@@ -268,3 +268,272 @@ body.modal-open { overflow: hidden; }
 .skills-open { cursor: pointer; font-family: inherit; }
 #skills-project .two { margin-top: 20px; }
 #skills-project .panel { box-shadow: none; }
+
+
+/* ==========================================================
+   PROFESSIONAL POLISH — layout, hierarchy and interaction
+   Original content and existing cream/terracotta palette kept.
+   ========================================================== */
+:root {
+  --content-width: 1160px;
+  --radius-card: 20px;
+  --radius-control: 12px;
+  --space-section: clamp(64px, 8vw, 104px);
+}
+html { scroll-padding-top: 92px; }
+body {
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+}
+.wrap { width: min(var(--content-width), calc(100% - 56px)); }
+h1, h2, h3 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+
+/* Navigation */
+.hero { border-bottom: 1px solid var(--line); }
+.nav {
+  position: relative;
+  min-height: 78px;
+  padding: 18px 0;
+  gap: 28px;
+}
+.brand {
+  font-size: 1rem;
+  letter-spacing: .13em;
+  white-space: nowrap;
+}
+.navlinks {
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  font-size: 13px;
+}
+.navlinks a {
+  padding: 8px 11px;
+  border-radius: 8px;
+  transition: color .2s ease, background .2s ease;
+}
+.navlinks a:hover { background: var(--bg-alt); }
+
+/* Hero */
+.hero {
+  background:
+    radial-gradient(ellipse at 86% 24%, var(--hero-glow), transparent 38%),
+    linear-gradient(180deg, var(--bg), var(--bg-alt));
+}
+.hero-grid {
+  min-height: 470px;
+  grid-template-columns: minmax(0, 1.55fr) minmax(210px, .65fr);
+  gap: clamp(32px, 6vw, 90px);
+  padding: clamp(72px, 9vw, 116px) 0;
+}
+.eyebrow {
+  padding: 7px 13px;
+  letter-spacing: .12em;
+  font-size: 11px;
+}
+.hero h1 {
+  margin: 22px 0 14px;
+  font-size: clamp(54px, 7.4vw, 88px);
+  line-height: .99;
+  letter-spacing: -.055em;
+}
+.role {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.5;
+  letter-spacing: -.025em;
+}
+.intro {
+  max-width: 620px;
+  margin: 20px 0 0;
+  font-size: 17px;
+  line-height: 1.8;
+}
+.avatar {
+  width: clamp(190px, 22vw, 250px);
+  height: clamp(190px, 22vw, 250px);
+  border: 8px solid var(--card);
+  border-radius: 34px;
+  transform: rotate(0);
+}
+.avatar:hover { transform: translateY(-4px); }
+
+/* Consistent section rhythm and headings */
+.section { padding: var(--space-section) 0; }
+.section-head { margin-bottom: 34px; }
+.kicker {
+  font-size: 11px;
+  letter-spacing: .18em;
+}
+.section h2 {
+  margin: 9px 0 10px;
+  font-size: clamp(34px, 4.5vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+.sub { font-size: 16px; line-height: 1.75; }
+
+/* Cards and content panels */
+.cards { gap: 22px; }
+.card, .panel {
+  border-radius: var(--radius-card);
+  box-shadow: 0 5px 20px rgba(60, 35, 20, .045);
+}
+.card {
+  min-height: 220px;
+  border-top: 3px solid var(--accent);
+}
+.cardbody { padding: clamp(24px, 3vw, 32px); }
+.tag {
+  font-size: 11px;
+  letter-spacing: .12em;
+}
+.card h3, .panel h3, .item h3 {
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -.025em;
+}
+.card p, .panel p, .panel li, .item p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.panel {
+  padding: clamp(23px, 3vw, 30px);
+}
+.two, .edu { gap: 20px; }
+.two > .panel, .edu > .panel { height: 100%; }
+.panel:hover, .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px rgba(60, 35, 20, .09);
+}
+
+/* Experience timeline */
+.timeline { gap: 20px; }
+.item {
+  position: relative;
+  padding: 26px 30px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px var(--radius-card) var(--radius-card) 4px;
+  background: var(--card);
+  box-shadow: 0 5px 20px rgba(60, 35, 20, .04);
+}
+.item h3 { margin-bottom: 6px; }
+.meta {
+  margin-bottom: 10px;
+  font-size: 12px;
+  letter-spacing: .035em;
+}
+.item ul { margin-top: 14px; }
+.item li { padding-left: 3px; margin-bottom: 8px; }
+
+/* Buttons and skill chips */
+.btn, .contactlink {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 19px;
+  border-radius: var(--radius-control);
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: .01em;
+}
+.btn { cursor: pointer; }
+.btn:hover, .contactlink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px rgba(60, 35, 20, .12);
+}
+.btn:focus-visible, .navlinks a:focus-visible,
+.contactlink:focus-visible, .modal-close:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 3px;
+}
+.chips { gap: 9px; }
+.chip {
+  padding: 7px 12px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Contact and footer */
+.contact {
+  background:
+    radial-gradient(ellipse at 90% 15%, var(--hero-glow), transparent 42%),
+    var(--bg);
+}
+.contact h2 { margin-bottom: 12px; }
+.contactlink { overflow-wrap: anywhere; }
+footer {
+  padding: 25px 20px;
+  font-size: 12px;
+  letter-spacing: .025em;
+}
+
+/* Detail dialogs */
+.project-modal {
+  padding: 28px;
+  background: rgba(24, 18, 15, .76);
+  backdrop-filter: blur(12px);
+}
+.modal-panel {
+  width: min(880px, 100%);
+  border-radius: 24px;
+  box-shadow: 0 32px 100px rgba(0,0,0,.28);
+}
+.modal-panel h2 {
+  letter-spacing: -.04em;
+  line-height: 1.1;
+}
+.modal-section-head h3 { letter-spacing: -.02em; }
+.media-placeholder { border-radius: 14px; }
+#skills-project .two { gap: 14px; }
+#skills-project .panel {
+  border-radius: 15px;
+  border-top: 2px solid var(--line);
+}
+#skills-project .panel h3 { font-size: 19px; }
+
+/* Responsive refinements */
+@media (max-width: 900px) {
+  .nav { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .navlinks { justify-content: flex-start; }
+  .hero-grid { min-height: auto; }
+}
+@media (max-width: 760px) {
+  .wrap { width: min(100% - 36px, var(--content-width)); }
+  .section { padding: 58px 0; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 48px 0 62px;
+  }
+  .avatar {
+    grid-row: auto;
+    width: 142px;
+    height: 142px;
+    justify-self: start;
+    border-width: 5px;
+    border-radius: 24px;
+  }
+  .hero h1 { font-size: clamp(48px, 13vw, 68px); }
+  .intro { font-size: 16px; }
+  .navlinks { gap: 4px; }
+  .navlinks a { padding: 7px 9px; font-size: 12px; }
+  .cards, .two, .edu { grid-template-columns: 1fr; }
+  .card { min-height: 0; }
+  .cardbody, .panel { padding: 23px; }
+  .item { padding: 22px 20px; }
+  .project-modal { padding: 10px; }
+  .modal-panel { border-radius: 20px 20px 12px 12px; }
+}
+@media (max-width: 420px) {
+  .wrap { width: calc(100% - 30px); }
+  .navlinks { gap: 2px; }
+  .navlinks a { padding: 6px 7px; font-size: 11px; }
+  .actions { gap: 9px; }
+  .btn { padding: 11px 14px; }
+}
