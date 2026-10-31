@@ -71,3 +71,29 @@ h1, h2, h3, .brand, .avatar {
   .hero h1 { line-height: 1.02; letter-spacing: -0.04em; }
   .section h2 { line-height: 1.14; }
 }
+
+
+/* WINE RED + LIGHT SAND — forced final palette override */
+:root {
+  --bg: #F5EBD0 !important;
+  --bg-alt: #EFE1C2 !important;
+  --card: #FFF9EA !important;
+  --heading: #7F011F !important;
+  --text: #56313A !important;
+  --line: #E3D3B4 !important;
+  --accent: #7F011F !important;
+  --accent-ink: #F5EBD0 !important;
+  --accent-2: #A33A52 !important;
+  --chip-bg: #EFE1C2 !important;
+  --placeholder: #EFE1C2 !important;
+  --hero-glow: rgba(127, 1, 31, .10) !important;
+}
+body, .section, .projects, .contact, footer { background-color: var(--bg) !important; }
+.section.alt, .item, .media-placeholder { background-color: var(--bg-alt) !important; }
+.card, .panel, .modal-panel, .eyebrow { background-color: var(--card) !important; }
+h1, h2, h3, .brand, .heading { color: var(--heading) !important; }
+body, p, li, .intro, .sub, .role { color: var(--text); }
+.btn, .contactlink { background: var(--accent) !important; color: var(--accent-ink) !important; border-color: var(--accent) !important; }
+.btn.alt { background: transparent !important; color: var(--heading) !important; border-color: var(--line) !important; }
+.chip { background: var(--chip-bg) !important; color: var(--heading) !important; border-color: var(--line) !important; }
+.tag, .kicker, .meta, .eyebrow { color: var(--accent) !important; }
