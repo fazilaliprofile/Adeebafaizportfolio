@@ -262,3 +262,9 @@ body.modal-open { overflow: hidden; }
   .modal-panel { max-height: 92vh; border-radius: 20px 20px 12px 12px; padding: 26px 20px; }
   .modal-section-head { align-items: flex-start; }
 }
+
+/* Core Skills: keep categories inside an on-demand popup */
+.skills-section .section-head { margin-bottom: 18px; }
+.skills-open { cursor: pointer; font-family: inherit; }
+#skills-project .two { margin-top: 20px; }
+#skills-project .panel { box-shadow: none; }
