@@ -3,18 +3,18 @@
    (cream + terracotta, with an automatic dark mode)
    ========================================================== */
 :root {
-  --bg: #faf6f1;            /* page background */
-  --bg-alt: #f2ebe2;        /* alternate section background */
+  --bg: #f8f5f0;            /* page background */
+  --bg-alt: #eee8df;        /* alternate section background */
   --card: #ffffff;          /* cards and panels */
-  --heading: #2a2320;       /* headings and main text */
-  --text: #6e625b;          /* body text */
-  --line: #e4d9cc;          /* borders */
-  --accent: #a8442f;        /* terracotta accent */
+  --heading: #292321;       /* headings and main text */
+  --text: #62574f;          /* body text */
+  --line: #e2d8cd;          /* borders */
+  --accent: #934331;        /* terracotta accent */
   --accent-ink: #ffffff;    /* text on accent */
-  --accent-2: #d98a5f;      /* second accent for gradients */
-  --chip-bg: #f2ebe2;
-  --placeholder: #f2ebe2;
-  --hero-glow: rgba(168, 68, 47, 0.10);
+  --accent-2: #c47b59;      /* second accent for gradients */
+  --chip-bg: #eee8df;
+  --placeholder: #eee8df;
+  --hero-glow: rgba(147, 67, 49, 0.09);
   --shadow: 0 10px 30px rgba(60, 35, 20, 0.08);
   --shadow-lg: 0 24px 60px rgba(60, 35, 20, 0.14);
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
@@ -23,18 +23,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #17120f;
-    --bg-alt: #1e1814;
-    --card: #251e19;
-    --heading: #f3ebe3;
-    --text: #b3a69b;
-    --line: #382d26;
-    --accent: #e07a5f;
+    --bg: #191512;
+    --bg-alt: #211a16;
+    --card: #28201b;
+    --heading: #f3ece5;
+    --text: #b8aaa0;
+    --line: #3d3029;
+    --accent: #d98568;
     --accent-ink: #1a110d;
-    --accent-2: #f0a37f;
-    --chip-bg: #2d251f;
-    --placeholder: #2d251f;
-    --hero-glow: rgba(224, 122, 95, 0.14);
+    --accent-2: #e4a080;
+    --chip-bg: #302720;
+    --placeholder: #302720;
+    --hero-glow: rgba(217, 133, 104, 0.13);
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.5);
   }
