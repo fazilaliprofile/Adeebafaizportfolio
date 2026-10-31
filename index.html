@@ -161,38 +161,14 @@
     </div>
   </section>
 
-  <section id="skills" class="section">
+  <section id="skills" class="section skills-section">
     <div class="wrap">
       <div class="section-head">
         <div class="kicker">Capabilities</div>
         <h2>Core Skills</h2>
+        <p class="sub">Explore professional and creative capabilities.</p>
       </div>
-      <div class="two">
-        <div class="panel">
-          <h3>Digital Marketing</h3>
-          <div class="chips"><span class="chip">Social Media Marketing</span><span class="chip">Content Creation</span><span class="chip">Content Planning</span><span class="chip">Social Media Strategy</span><span class="chip">Content Calendars</span></div>
-        </div>
-        <div class="panel">
-          <h3>Human Resources</h3>
-          <div class="chips"><span class="chip">Recruitment</span><span class="chip">Resume Screening</span><span class="chip">Interview Coordination</span><span class="chip">Onboarding</span><span class="chip">Offboarding</span><span class="chip">HR Operations</span><span class="chip">Performance Tracking</span><span class="chip">Documentation</span></div>
-        </div>
-        <div class="panel">
-          <h3>Leadership</h3>
-          <div class="chips"><span class="chip">Team Leadership</span><span class="chip">Team Coordination</span><span class="chip">Task Management</span><span class="chip">Intern Management</span><span class="chip">Communication</span><span class="chip">Collaboration</span></div>
-        </div>
-        <div class="panel">
-          <h3>Creative Skills</h3>
-          <div class="chips"><span class="chip">Canva</span><span class="chip">Graphic Design</span><span class="chip">Video Editing</span><span class="chip">Creative Content Development</span></div>
-        </div>
-        <div class="panel">
-          <h3>Technology</h3>
-          <div class="chips"><span class="chip">AI Tools</span><span class="chip">Microsoft Office</span><span class="chip">Problem Solving</span></div>
-        </div>
-        <div class="panel">
-          <h3>Soft Skills</h3>
-          <div class="chips"><span class="chip">Creativity</span><span class="chip">Communication</span><span class="chip">Management</span><span class="chip">Adaptability</span><span class="chip">Teamwork</span><span class="chip">Leadership</span></div>
-        </div>
-      </div>
+      <button class="btn skills-open" type="button" data-project="skills-project">View Core Skills <span aria-hidden="true">↗</span></button>
     </div>
   </section>
 
@@ -245,7 +221,7 @@
 </div>
 <script>
 (() => {
-  const openButtons = document.querySelectorAll('.project-open');
+  const openButtons = document.querySelectorAll('.project-open, .skills-open');
   let activeModal = null;
   let lastTrigger = null;
   const closeModal = () => {
@@ -276,5 +252,22 @@
 })();
 </script>
 
+
+<div class="project-modal" id="skills-project" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="skills-project-title">
+  <div class="modal-panel" tabindex="-1">
+    <button class="modal-close" type="button" aria-label="Close skills">×</button>
+    <div class="kicker">Capabilities</div>
+    <h2 id="skills-project-title">Core Skills</h2>
+    <p class="modal-intro">Professional, management and creative capabilities.</p>
+    <div class="two">
+      <div class="panel"><h3>Digital Marketing</h3><div class="chips"><span class="chip">Social Media Marketing</span><span class="chip">Content Creation</span><span class="chip">Content Planning</span><span class="chip">Social Media Strategy</span><span class="chip">Content Calendars</span></div></div>
+      <div class="panel"><h3>Human Resources</h3><div class="chips"><span class="chip">Recruitment</span><span class="chip">Resume Screening</span><span class="chip">Interview Coordination</span><span class="chip">Onboarding</span><span class="chip">Offboarding</span><span class="chip">HR Operations</span><span class="chip">Performance Tracking</span><span class="chip">Documentation</span></div></div>
+      <div class="panel"><h3>Leadership</h3><div class="chips"><span class="chip">Team Leadership</span><span class="chip">Team Coordination</span><span class="chip">Task Management</span><span class="chip">Intern Management</span><span class="chip">Communication</span><span class="chip">Collaboration</span></div></div>
+      <div class="panel"><h3>Creative Skills</h3><div class="chips"><span class="chip">Canva</span><span class="chip">Graphic Design</span><span class="chip">Video Editing</span><span class="chip">Creative Content Development</span></div></div>
+      <div class="panel"><h3>Technology</h3><div class="chips"><span class="chip">AI Tools</span><span class="chip">Microsoft Office</span><span class="chip">Problem Solving</span></div></div>
+      <div class="panel"><h3>Soft Skills</h3><div class="chips"><span class="chip">Creativity</span><span class="chip">Communication</span><span class="chip">Management</span><span class="chip">Adaptability</span><span class="chip">Teamwork</span><span class="chip">Leadership</span></div></div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
