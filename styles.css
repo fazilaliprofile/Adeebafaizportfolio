@@ -1,19 +1,19 @@
 /* Adeeba Faiz Portfolio — restored responsive layout + Wine Red / Light Sand theme */
 :root{
-  --bg:#F5EBD0;
-  --bg-alt:#EFE1C2;
-  --card:#FFF9EA;
-  --heading:#7F011F;
-  --text:#56313A;
-  --line:#E3D3B4;
-  --accent:#7F011F;
-  --accent-ink:#F5EBD0;
-  --accent-2:#A33A52;
-  --chip-bg:#EFE1C2;
-  --placeholder:#EFE1C2;
-  --hero-glow:rgba(127,1,31,.10);
-  --shadow:0 8px 26px rgba(74,20,34,.07);
-  --shadow-lg:0 18px 46px rgba(74,20,34,.13);
+  --bg:#F2E8D8;
+  --bg-alt:#E8D9C4;
+  --card:#FBF7F0;
+  --heading:#493328;
+  --text:#665449;
+  --line:#D8C7B2;
+  --accent:#6B4635;
+  --accent-ink:#FBF7F0;
+  --accent-2:#98745C;
+  --chip-bg:#E8D9C4;
+  --placeholder:#E8D9C4;
+  --hero-glow:rgba(107,70,53,.11);
+  --shadow:0 8px 26px rgba(73,51,40,.07);
+  --shadow-lg:0 18px 46px rgba(73,51,40,.13);
   --serif:"Playfair Display",Georgia,serif;
   --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
   --content-width:1160px;
