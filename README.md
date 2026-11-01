@@ -7,6 +7,7 @@ Hero · Projects (MJ Marketing Consultancy, Ascend) · About Me · Education · 
 
 ## Files
 - `index.html` — all content (taken from Adeeba's CV)
+- `script.js` — scroll progress bar, active nav link, scroll reveal and 3D card tilt (mouse devices only)
 - `styles.css` — colours and theme are the variables at the top of the file
 
 ## Deploy

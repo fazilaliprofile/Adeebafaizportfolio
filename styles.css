@@ -148,3 +148,65 @@ body.modal-open{overflow:hidden}
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+
+/* ==========================================================
+   CINEMATIC 3D + PROFESSIONAL POLISH LAYER
+   Uses the theme variables above, so palette changes carry over.
+   ========================================================== */
+:root{
+  --depth:0 1px 0 rgba(255,255,255,.7) inset,0 2px 4px rgba(73,51,40,.07),0 14px 28px -8px rgba(73,51,40,.15),0 36px 64px -22px rgba(73,51,40,.27);
+  --depth-hover:0 1px 0 rgba(255,255,255,.8) inset,0 4px 8px rgba(73,51,40,.09),0 26px 44px -10px rgba(73,51,40,.24),0 60px 96px -28px rgba(73,51,40,.42);
+  --glare:rgba(255,255,255,.6);
+  --reveal-tr:opacity .8s ease var(--d,0ms),translate .8s cubic-bezier(.2,.8,.2,1) var(--d,0ms);
+}
+html{scroll-padding-top:96px}
+
+/* Sticky glass navigation + scroll progress */
+.topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 84%,transparent);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line)}
+.topbar .nav{border-bottom:0;min-height:72px;padding:14px 0}
+.navlinks a.active{background:var(--card);color:var(--accent)}
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform:scaleX(0);transform-origin:left;pointer-events:none}
+
+/* Hero depth */
+.hero{background:radial-gradient(ellipse at 86% 22%,var(--hero-glow),transparent 40%),radial-gradient(ellipse at 6% 100%,var(--hero-glow),transparent 38%),linear-gradient(180deg,var(--bg),var(--bg-alt))}
+.avatar{box-shadow:0 0 0 1px var(--line),var(--depth-hover)}
+.btn,.contactlink{box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 6px 14px -4px rgba(73,51,40,.45)}
+.btn.alt{box-shadow:none}
+.btn:active,.contactlink:active{transform:translateY(1px)}
+.chip{transition:transform .25s,border-color .25s}
+.chip:hover{transform:translateY(-2px);border-color:var(--accent)}
+.section-head h2::after{content:"";display:block;width:56px;height:3px;margin-top:14px;border-radius:3px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+
+/* Cinematic 3D cards */
+.card,.panel,.item{position:relative;transform-style:preserve-3d;box-shadow:var(--depth)}
+.card{overflow:visible}
+#skills-project .panel{box-shadow:none}
+.card.tilt,.panel.tilt,.item.tilt{
+  transform:perspective(1100px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateZ(0);
+  transition:var(--reveal-tr),transform .6s cubic-bezier(.2,.8,.2,1),box-shadow .4s ease;
+}
+.card.tilt.is-tilting,.panel.tilt.is-tilting,.item.tilt.is-tilting{
+  transform:perspective(1100px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateZ(18px) scale(1.02);
+  transition:var(--reveal-tr),transform .12s ease-out,box-shadow .3s ease;
+  box-shadow:var(--depth-hover);z-index:2;
+}
+/* glare that follows the cursor */
+.tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s ease;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),var(--glare),transparent 55%);mix-blend-mode:soft-light}
+.tilt.is-tilting::after{opacity:1}
+/* content floats above the surface while tilting */
+.tilt h3,.tilt .tag,.tilt .meta,.tilt .project-open{transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.tilt.is-tilting h3{transform:translateZ(28px)}
+.tilt.is-tilting .tag,.tilt.is-tilting .meta{transform:translateZ(16px)}
+.tilt.is-tilting .project-open{transform:translateZ(22px)}
+
+/* Reveal on scroll */
+.js .rv{opacity:0;translate:0 28px;transition:var(--reveal-tr)}
+.js .rv.in{opacity:1;translate:0 0}
+
+@media(max-width:900px){
+  html{scroll-padding-top:24px}
+  .topbar{position:static}
+}
+@media(max-width:760px){
+  .card.tilt,.panel.tilt,.item.tilt{transform:none}
+}
