@@ -234,3 +234,19 @@ html{scroll-padding-top:96px}
 .certificate-detail{min-width:0;overflow:hidden}
 .certificate-preview{display:block;width:100%;height:320px;max-height:42vh;min-height:220px;border:1px solid var(--line);border-radius:12px;background:#fff}
 @media(max-width:760px){.certificate-preview{height:260px;max-height:38vh;min-height:190px}}
+
+
+/* Makeup certification gallery */
+.makeup-cert-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.makeup-cert-item{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:var(--card,rgba(255,255,255,.55))}
+.makeup-cert-image{display:block;width:100%;padding:0;border:0;background:#f7f3ed;cursor:zoom-in;overflow:hidden}
+.makeup-cert-image img{display:block;width:100%;height:250px;object-fit:contain;transition:transform .25s ease}
+.makeup-cert-image:hover img{transform:scale(1.025)}
+.makeup-cert-caption{padding:14px 16px 16px}
+.makeup-cert-caption h3{font-size:1rem;line-height:1.4;margin:0 0 7px}
+.makeup-cert-caption p{font-size:.88rem;line-height:1.55;margin:0;color:var(--muted,#6f665c)}
+.makeup-cert-lightbox{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(18,16,14,.92)}
+.makeup-cert-lightbox.is-open{display:flex}
+.makeup-cert-lightbox img{display:block;max-width:min(96vw,1200px);max-height:90vh;width:auto;height:auto;object-fit:contain;border-radius:8px;background:#fff}
+.makeup-cert-lightbox-close{position:absolute;top:18px;right:22px;border:0;border-radius:50%;width:44px;height:44px;background:#fff;color:#222;font-size:30px;line-height:1;cursor:pointer}
+@media(max-width:760px){.makeup-cert-gallery{grid-template-columns:1fr;gap:14px}.makeup-cert-image img{height:230px}.makeup-cert-lightbox{padding:12px}.makeup-cert-lightbox img{max-width:98vw;max-height:84vh}}
