@@ -407,11 +407,18 @@
     <h2 id="cert-makeup-title">Professional Makeup Certifications</h2>
     <p class="modal-intro">A dedicated collection of makeup artistry qualifications, professional courses and training certificates.</p>
     <section class="modal-section">
-      <div class="modal-section-head"><h3>Makeup Certifications</h3><span class="coming-soon">Add certificates</span></div>
-      <div class="media-placeholder">
-        <span class="placeholder-icon">✦</span>
-        <strong>Certification Gallery</strong>
-        <p>Certificate images and course details can be added here. No credentials are listed until the certificates are provided.</p>
+      <div class="modal-section-head"><h3>Makeup &amp; Beauty Certifications</h3><span class="gallery-count">10 CERTIFICATES</span></div>
+      <div class="makeup-cert-gallery">
+        <article class="makeup-cert-item"><button class="makeup-cert-image" type="button" data-cert-image="Makeup%20Certificates/IMG_5124.jpeg" aria-label="View Online Eyelash Extensions Diploma certificate"><img src="Makeup%20Certificates/IMG_5124.jpeg" alt="Online Eyelash Extensions Diploma certificate" loading="lazy"></button><div class="makeup-cert-caption"><h3>Online Eyelash Extensions Diploma</h3><p>Jignaa Vala Studios · Educator: Jignaa Vala</p></div></article>
+        <article class="makeup-cert-item"><button class="makeup-cert-image" type="button" data-cert-image="Makeup%20Certificates/IMG_5125.jpeg" aria-label="View No Glue Nail Extensions certificate"><img src="Makeup%20Certificates/IMG_5125.jpeg" alt="No Glue Nail Extensions certificate" loading="lazy"></button><div class="makeup-cert-caption"><h3>No Glue Nail Extensions</h3><p>Jignaa Vala Studios · Educator: Jignaa Vala</p></div></article>
+        <article class="makeup-cert-item"><button class="makeup-cert-image" type="button" data-cert-image="Makeup%20Certificates/IMG_5126.jpeg" aria-label="View Brow Lamination Course certificate"><img src="Makeup%20Certificates/IMG_5126.jpeg" alt="Brow Lamination Course certificate" loading="lazy"></button><div class="makeup-cert-caption"><h3>Brow Lamination Course</h3><p>Jignaa Vala Studios · Educator: Jignaa Vala</p></div></article>
+        <article class="makeup-cert-item"><button class="makeup-cert-image" type="button" data-cert-image="Makeup%20Certificates/IMG_5127.jpeg" aria-label="View Lash Lifting Course certificate"><img src="Makeup%20Certificates/IMG_5127.jpeg" alt="Lash Lifting Course certificate" loading="lazy"></button><div class="makeup-cert-caption"><h3>Lash Lifting Course</h3><p>Jignaa Vala Studios · Educator: Jignaa Vala</p></div></article>
+        <article class="makeup-cert-item"><button class="makeup-cert-image" type="button" data-cert-image="Makeup%20Certificates/IMG_5128.png" aria-label="View 4 Days Online Nail Crash Course certificate"><img src="Makeup%20Certificates/IMG_5128.png" alt="4 Days Online Nail Crash Course certificate" loading="lazy"></button><div class="makeup-cert-caption"><h3>4 Days Online Nail Crash Course</h3><p>Nail World by Anamika Academy · Anamika Arya</p></div></article>
+        <article class="makeup-cert-item"><button class="makeup-cert-image" type="button" data-cert-image="Makeup%20Certificates/IMG_5129.png" aria-label="View Nail Art Masterclass certificate"><img src="Makeup%20Certificates/IMG_5129.png" alt="2 Days 3D to 9D Online Nail Art Masterclass certificate" loading="lazy"></button><div class="makeup-cert-caption"><h3>2 Days 3D to 9D Online Nail Art Masterclass</h3><p>Anamika Makeup Studio Academy · Anamika Arya</p></div></article>
+        <article class="makeup-cert-item"><button class="makeup-cert-image" type="button" data-cert-image="Makeup%20Certificates/IMG_5130.png" aria-label="View Basic to Bridal Mehndi Course certificate"><img src="Makeup%20Certificates/IMG_5130.png" alt="Basic to Bridal Mehndi Course certificate" loading="lazy"></button><div class="makeup-cert-caption"><h3>Basic to Bridal Mehndi Course</h3><p>Naziasma Mehndi Art · Authorized by Nazia Ahmed</p></div></article>
+        <article class="makeup-cert-item"><button class="makeup-cert-image" type="button" data-cert-image="Makeup%20Certificates/IMG_5132.jpeg" aria-label="View Advanced Nailart Techniques workshop certificate"><img src="Makeup%20Certificates/IMG_5132.jpeg" alt="Advanced Nailart Techniques 3.0 Workshop certificate" loading="lazy"></button><div class="makeup-cert-caption"><h3>Advanced Nailart Techniques 3.0 Workshop</h3><p>Lushify Press-On Gel Nails · Deekshitha Thayi · 11–12 October 2025</p></div></article>
+        <article class="makeup-cert-item"><button class="makeup-cert-image" type="button" data-cert-image="Makeup%20Certificates/IMG_5133.jpeg" aria-label="View 15 Days Hair Chemical Course certificate"><img src="Makeup%20Certificates/IMG_5133.jpeg" alt="15 Days Hair Chemical Course certificate" loading="lazy"></button><div class="makeup-cert-caption"><h3>15 Days Hair Chemical Course</h3><p>Hair Dresser Zone</p></div></article>
+        <article class="makeup-cert-item"><button class="makeup-cert-image" type="button" data-cert-image="Makeup%20Certificates/IMG_5134.jpeg" aria-label="View Press-on Nail Art Course certificate"><img src="Makeup%20Certificates/IMG_5134.jpeg" alt="Press-on Nail Art Course certificate" loading="lazy"></button><div class="makeup-cert-caption"><h3>Press-on Nail Art Course</h3><p>Art’s ANID · National Institute of Designs</p></div></article>
       </div>
     </section>
   </div>
@@ -426,6 +433,16 @@
  document.querySelectorAll('.poster-thumb').forEach(btn=>btn.addEventListener('click',()=>{preview.src=btn.dataset.full;preview.alt=btn.querySelector('img').alt;box.classList.add('is-open');box.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');}));
  box.querySelector('button').addEventListener('click',close);
  box.addEventListener('click',e=>{if(e.target===box)close();});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('is-open'))close();});
+})();
+</script>
+<div class="makeup-cert-lightbox" id="makeup-cert-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Makeup certificate preview"><button type="button" class="makeup-cert-lightbox-close" aria-label="Close certificate preview">×</button><img alt="Certificate enlarged"></div>
+<script>
+(function(){
+ const box=document.getElementById('makeup-cert-lightbox'),img=box.querySelector('img');
+ const close=()=>{box.classList.remove('is-open');box.setAttribute('aria-hidden','true');img.removeAttribute('src');};
+ document.querySelectorAll('.makeup-cert-image').forEach(btn=>btn.addEventListener('click',()=>{img.src=btn.dataset.certImage;img.alt=btn.querySelector('img').alt;box.classList.add('is-open');box.setAttribute('aria-hidden','false');}));
+ box.querySelector('button').addEventListener('click',close);box.addEventListener('click',e=>{if(e.target===box)close();});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('is-open'))close();});
 })();
 </script>
