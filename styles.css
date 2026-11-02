@@ -250,3 +250,8 @@ html{scroll-padding-top:96px}
 .makeup-cert-lightbox img{display:block;width:auto!important;height:auto!important;max-width:calc(100vw - 48px)!important;max-height:calc(100vh - 100px)!important;object-fit:contain;object-position:center;border-radius:8px;background:#fff}
 .makeup-cert-lightbox-close{position:absolute;top:14px;right:16px;border:0;border-radius:50%;width:44px;height:44px;background:#fff;color:#222;font-size:30px;line-height:1;cursor:pointer}
 @media(max-width:760px){.makeup-cert-gallery{grid-template-columns:1fr;gap:14px}.makeup-cert-image{height:200px;padding:10px}.makeup-cert-lightbox{padding:12px}.makeup-cert-lightbox img{max-width:calc(100vw - 24px)!important;max-height:calc(100vh - 80px)!important}}
+
+
+/* Red hero resume download button */
+.hero .resume-btn{background:#B42332;border-color:#B42332;color:#fff;box-shadow:0 5px 14px rgba(180,35,50,.24)}
+.hero .resume-btn:hover{background:#941C29;border-color:#941C29;box-shadow:0 8px 20px rgba(180,35,50,.3)}
