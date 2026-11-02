@@ -151,12 +151,7 @@
         <div class="kicker">Academic background</div>
         <h2>Education</h2>
       </div>
-      <div class="edu">
-        <div class="panel"><h3>MBA — Digital Marketing &amp; Human Resources</h3><p>Invertis University · Dual Specialization</p><span>2024 – Present</span></div>
-        <div class="panel"><h3>BBA — Human Resources</h3><p>Invertis University</p><span>2024</span></div>
-        <div class="panel"><h3>Senior Secondary (Class XII) — PCB</h3><p>Wood Row Senior Secondary School</p><span>Completed</span></div>
-        <div class="panel"><h3>Secondary (Class X)</h3><p>Wood Row Senior Secondary School</p><span>Completed</span></div>
-      </div>
+      <button class="btn project-open" type="button" data-project="education-details">View Education <span aria-hidden="true">↗</span></button>
     </div>
   </section>
 
@@ -254,6 +249,21 @@
 
 
 <!-- Project detail popups -->
+<div class="project-modal" id="education-details" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="education-details-title">
+  <div class="modal-panel" tabindex="-1">
+    <button class="modal-close" type="button" aria-label="Close education details">×</button>
+    <div class="kicker">Academic Background</div>
+    <h2 id="education-details-title">Education</h2>
+    <div class="two">
+      <div class="panel"><h3>MBA — Digital Marketing &amp; Human Resources</h3><p>Invertis University · Dual Specialization</p><span>2024 – Present</span></div>
+      <div class="panel"><h3>BBA — Human Resources</h3><p>Invertis University</p><span>2024</span></div>
+      <div class="panel"><h3>Senior Secondary (Class XII) — PCB</h3><p>Wood Row Senior Secondary School</p><span>Completed</span></div>
+      <div class="panel"><h3>Secondary (Class X)</h3><p>Wood Row Senior Secondary School</p><span>Completed</span></div>
+    </div>
+  </div>
+</div>
+
+
 <div class="project-modal" id="experience-highlights" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="experience-highlights-title">
   <div class="modal-panel" tabindex="-1">
     <button class="modal-close" type="button" aria-label="Close experience highlights">×</button>
