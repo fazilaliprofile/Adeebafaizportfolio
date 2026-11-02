@@ -249,9 +249,3 @@ html{scroll-padding-top:96px}
 .makeup-cert-lightbox img{display:block;width:auto!important;height:auto!important;max-width:calc(100vw - 48px)!important;max-height:calc(100vh - 100px)!important;object-fit:contain;object-position:center;border-radius:8px;background:#fff}
 .makeup-cert-lightbox-close{position:absolute;top:14px;right:16px;border:0;border-radius:50%;width:44px;height:44px;background:#fff;color:#222;font-size:30px;line-height:1;cursor:pointer}
 @media(max-width:760px){.makeup-cert-gallery{grid-template-columns:1fr;gap:14px}.makeup-cert-image{height:200px;padding:10px}.makeup-cert-lightbox{padding:12px}.makeup-cert-lightbox img{max-width:calc(100vw - 24px)!important;max-height:calc(100vh - 80px)!important}}
-
-/* Company certificate image cards */
-.company-cert-image-card{overflow:hidden}
-.company-cert-image-card .company-certificate-image{display:block;width:100%;height:220px;object-fit:contain;object-position:center;background:#f7f5f2;border-bottom:1px solid var(--line)}
-.company-cert-image-card .cardbody::before{display:none}
-@media(max-width:600px){.company-cert-image-card .company-certificate-image{height:190px}}
