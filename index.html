@@ -211,12 +211,7 @@
         <div class="kicker">At a glance</div>
         <h2>Experience Highlights</h2>
       </div>
-      <div class="two">
-        <div class="panel"><h3>Team Leadership</h3><p>Led and coordinated intern teams while maintaining attendance, task allocation, performance records and project updates.</p></div>
-        <div class="panel"><h3>Content Creation</h3><p>Created multi-platform social media content and visual assets for professional digital marketing projects.</p></div>
-        <div class="panel"><h3>Recruitment Support</h3><p>Supported recruitment workflows from resume screening and interviews through onboarding and offboarding.</p></div>
-        <div class="panel"><h3>Training &amp; Development</h3><p>Developed structured training modules and supported employee and intern development initiatives.</p></div>
-      </div>
+      <button class="btn experience-highlights-open" type="button" data-project="experience-highlights">View Experience Highlights <span aria-hidden="true">↗</span></button>
     </div>
   </section>
 
@@ -259,6 +254,21 @@
 
 
 <!-- Project detail popups -->
+<div class="project-modal" id="experience-highlights" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="experience-highlights-title">
+  <div class="modal-panel" tabindex="-1">
+    <button class="modal-close" type="button" aria-label="Close experience highlights">×</button>
+    <div class="kicker">Professional Highlights</div>
+    <h2 id="experience-highlights-title">Experience Highlights</h2>
+    <div class="two">
+      <div class="panel"><h3>Team Leadership</h3><p>Led and coordinated intern teams, including task allocation, attendance and performance tracking.</p></div>
+      <div class="panel"><h3>Content Creation</h3><p>Created social media content, posts, reels and visual assets for digital marketing projects.</p></div>
+      <div class="panel"><h3>Recruitment</h3><p>Supported resume screening, candidate shortlisting, interview coordination and onboarding.</p></div>
+      <div class="panel"><h3>Support</h3><p>Supported HR operations, documentation, employee coordination and day-to-day project activities.</p></div>
+      <div class="panel"><h3>Training &amp; Development</h3><p>Developed training modules and learning materials, and supported employee and intern development.</p></div>
+    </div>
+  </div>
+</div>
+
 <div class="project-modal" id="mj-project" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="mj-project-title">
   <div class="modal-panel" tabindex="-1">
     <button class="modal-close" type="button" aria-label="Close project">×</button>
