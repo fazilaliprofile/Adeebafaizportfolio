@@ -398,7 +398,7 @@
 (function(){
  const box=document.getElementById('poster-lightbox');
  const preview=box.querySelector('img');
- const close=()=>{box.classList.remove('is-open');box.setAttribute('aria-hidden','true');preview.removeAttribute('src');document.body.classList.remove('modal-open');};
+ const close=()=>{box.classList.remove('is-open');box.setAttribute('aria-hidden','true');preview.removeAttribute('src');if(!document.querySelector('.project-modal.is-open'))document.body.classList.remove('modal-open');};
  document.querySelectorAll('.poster-thumb').forEach(btn=>btn.addEventListener('click',()=>{preview.src=btn.dataset.full;preview.alt=btn.querySelector('img').alt;box.classList.add('is-open');box.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');}));
  box.querySelector('button').addEventListener('click',close);
  box.addEventListener('click',e=>{if(e.target===box)close();});
