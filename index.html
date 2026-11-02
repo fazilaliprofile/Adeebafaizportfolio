@@ -286,36 +286,67 @@
 </div>
 <script>
 (() => {
-  const openButtons = document.querySelectorAll('.project-open, .skills-open');
-  let activeModal = null;
+  'use strict';
+
   let lastTrigger = null;
-  const closeModal = () => {
-    if (!activeModal) return;
-    activeModal.classList.remove('is-open');
-    activeModal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('modal-open');
-    activeModal = null;
-    if (lastTrigger) lastTrigger.focus();
-  };
-  openButtons.forEach(button => button.addEventListener('click', () => {
-    const modal = document.getElementById(button.dataset.project);
+
+  function openModal(modal, trigger) {
     if (!modal) return;
-    lastTrigger = button;
-    activeModal = modal;
+    document.querySelectorAll('.project-modal.is-open').forEach(open => {
+      open.classList.remove('is-open');
+      open.setAttribute('aria-hidden', 'true');
+    });
+    lastTrigger = trigger || null;
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
-    modal.querySelector('.modal-panel').focus();
-  }));
-  document.querySelectorAll('.modal-close').forEach(button => button.addEventListener('click', closeModal));
-  document.querySelectorAll('.project-modal').forEach(modal => modal.addEventListener('click', event => {
-    if (event.target === modal) closeModal();
-  }));
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeModal();
+    const panel = modal.querySelector('.modal-panel');
+    if (panel) panel.focus();
+  }
+
+  function closeModal(modal) {
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    if (!document.querySelector('.project-modal.is-open') &&
+        !document.querySelector('.poster-lightbox.is-open')) {
+      document.body.classList.remove('modal-open');
+    }
+    if (lastTrigger && document.contains(lastTrigger)) lastTrigger.focus();
+  }
+
+  // Delegation ensures modals added later in the page (certificates/skills) work too.
+  document.addEventListener('click', event => {
+    const trigger = event.target.closest('.project-open, .skills-open');
+    if (trigger) {
+      event.preventDefault();
+      openModal(document.getElementById(trigger.dataset.project), trigger);
+      return;
+    }
+
+    const closeButton = event.target.closest('.project-modal .modal-close');
+    if (closeButton) {
+      closeModal(closeButton.closest('.project-modal'));
+      return;
+    }
+
+    const backdrop = event.target.closest('.project-modal');
+    if (backdrop && event.target === backdrop) closeModal(backdrop);
   });
-})();
-</script>
+
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+
+    const lightbox = document.getElementById('poster-lightbox');
+    if (lightbox && lightbox.classList.contains('is-open')) {
+      // Let the poster preview's own handler close first; keep its parent project open.
+      return;
+    }
+
+    const modal = document.querySelector('.project-modal.is-open');
+    if (modal) closeModal(modal);
+  });
+})();</script>
 
 
 <div class="project-modal" id="skills-project" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="skills-project-title">
